@@ -1,0 +1,10 @@
+extends ../layouts/common.pug
+block content
+  h5.text-info(class="mb-3") Hãy nhập nội dung vào input
+  div
+    form(action="/users/update/" + id + "/done", method="POST")
+      div
+        p(style="margin-bottom: 5px") Name:
+        input.form-control(type="text" ,name="name", value= name)
+      div(style="margin-top: 16px")
+        button.btn.btn-info Sửa
